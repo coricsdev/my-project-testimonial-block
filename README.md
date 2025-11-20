@@ -192,10 +192,10 @@ The block is designed for pixel-perfect WYSIWYG, using the same component:
 
 - Dynamic ACF Block via ```render_callback```
 
-Allows:
-  - Clean SSR-safe setup
-  - JSON data passed to React
-  - Automatic frontend hydration
+    Allows:
+   - Clean SSR-safe setup
+   - JSON data passed to React
+   - Automatic frontend hydration
 
 - Autoplay Slider Logic in React
 A simple ```setInterval``` approach was chosen for clarity and minimal runtime overhead.
