@@ -20,7 +20,7 @@ It uses **ACF (Advanced Custom Fields)** for data storage and **React** for rend
 ---
 
 ##  Folder Structure
-
+```bash
 my-project-testimonial-block/
 │── my-project-testimonial-block.php
 │── src/
@@ -36,11 +36,11 @@ my-project-testimonial-block/
 │── package-lock.json
 │── README.md
 │── .gitignore
-
+```
 
 ---
 
-## 🚀 Installation
+## Installation
 
 ### 1. Clone or download the plugin
 
@@ -53,102 +53,97 @@ git clone https://github.com/coricsdev/my-project-testimonial-block.git
 npm install
 ```
 
-3. Build assets
+### 3. Build assets
+```bash
 npm run build
+```
 
-4. Activate the plugin
+### 4. Activate the plugin
 Go to your WordPress admin:
 
 Plugins → Installed Plugins → Activate "My Project – Testimonial Block"
 
-Using the Block
+---
+
+## Using the Block
 
 Add Testimonials (Via ACF)
 
 The plugin automatically registers an ACF Field Group for:
 
-Name
-
-Role
-
-Testimonial Text
-
-Image
+- Name
+- Role
+- Testimonial Text
+- Image
 
 You can add multiple testimonials using the Repeater.
 
 Insert the Block
 
 Inside Gutenberg:
+- Click + Add Block
+- Search for Testimonial
+- Add/edit testimonial rows in the ACF fields area
 
-Click + Add Block
+---
 
-Search for Testimonial
+## Slider Behavior
 
-Add/edit testimonial rows in the ACF fields area
+- Automatically slides every 2 seconds
+- Users can click dots to switch slides manually
+- Uses React for smooth UI transitions
+- Works seamlessly on mobile and desktop
 
-Slider Behavior
+---
 
-Automatically slides every 2 seconds
-
-Users can click dots to switch slides manually
-
-Uses React for smooth UI transitions
-
-Works seamlessly on mobile and desktop
-
-React Rendering
+## React Rendering
 
 This block uses a shared React component for:
-
-The Gutenberg editor preview
-
-The frontend output
+- The Gutenberg editor preview
+- The frontend output
 
 Data flow:
-
-ACF values → PHP render_callback()
-
-PHP outputs a wrapper with a JSON data-* attribute
-
-React mounts and renders the slider using the JSON data
+- ACF values → PHP render_callback()
+- PHP outputs a wrapper with a JSON data-* attribute
+- React mounts and renders the slider using the JSON data
 
 This ensures editor = frontend visually (true WYSIWYG).
 
+---
 
-Styling
+## Styling
 
 Main stylesheet:
+```bash
 assets/css/testimonial-card.css
+```
 
 Includes:
 
-Card layout styling
-
-Avatar circle cropping
-
-Typography improvements
-
-Slider dot styling
-
-Responsive adjustments
-
-Shadow + spacing for modern aesthetic
+- Card layout styling
+- Avatar circle cropping
+- Typography improvements
+- Slider dot styling
+- Responsive adjustments
+- Shadow + spacing for modern aesthetic
 
 
-Development
+---
+
+## Development
 Run in watch mode:
+```bash
 npm start
-
+```
 Build for production:
+```bash
 npm run build
+```
 
+---
 
-Requirements:
-WordPress 6+
-
-ACF Pro 6+ (or ACF Free + ACF Blocks enabled)
-
-PHP 8.0+
-
-Node.js 16+ (for build tools)
+## Requirements:
+- WordPress 6+
+- ACF Pro 6+ (or ACF Free + ACF Blocks enabled)
+- PHP 8.0+
+- Node.js 16+ (for build tools)
