@@ -63,6 +63,9 @@ Go to your WordPress admin:
 
 Plugins → Installed Plugins → Activate "My Project – Testimonial Block"
 
+### 5. Ensure ACF Pro (or ACF with block support)
+Go to your WordPress admin and install ACF Pro or any ACF with block support plugin
+
 ---
 
 ## Using the Block
@@ -82,7 +85,7 @@ You can add multiple testimonials using the Repeater.
 
 Inside Gutenberg:
 - Click + Add Block
-- Search for Testimonial
+- Search for **Testimonial**
 - Add/edit testimonial rows in the ACF fields area
 
 ---
