@@ -180,7 +180,7 @@ The block is designed for pixel-perfect WYSIWYG, using the same component:
   - Same JSON props are passed to the same React ```<TestimonialSlider />``` component.
   - Identical layout, slider behavior, and styling.
 
-*No alternate markup or placeholder content is used — except fallback testimonial data when ACF fields are empty.*
+> No alternate markup or placeholder content is used — except fallback testimonial data when ACF fields are empty.
 
 ### Assumptions & Architectural Decisions
 
@@ -211,5 +211,11 @@ The block is designed for pixel-perfect WYSIWYG, using the same component:
 
 - AI was used to assist with adding code comments and generating this README.md file.  
 - All functionality, logic, and final implementation were reviewed and validated manually.
+
+---
+
+## Live Demo:
+
+[Watch The Video Demo](https://www.loom.com/share/aa68709eb6af4d779dba6e030b88b050)
 
 
