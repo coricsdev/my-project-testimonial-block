@@ -1,0 +1,100 @@
+/* Slider wrapper */
+.testimonial-slider {
+	max-width: 640px;
+	margin: 1.5rem auto;
+}
+
+/* Card */
+.testimonial-card {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: 1.5rem;
+	padding: 1.5rem;
+	border-radius: 12px;
+	background-color: #ffffff;
+	box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+	color: #0f172a;
+	font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+		sans-serif;
+}
+
+.testimonial-card__image {
+	flex: 0 0 72px;
+	width: 72px;
+	height: 72px;
+	border-radius: 999px;
+	overflow: hidden;
+	background-color: #e5e7eb;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.testimonial-card__image img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.testimonial-card__content {
+	flex: 1 1 auto;
+}
+
+.testimonial-card__text {
+	margin: 0 0 0.75rem;
+	font-size: 0.95rem;
+	line-height: 1.6;
+	color: #111827;
+}
+
+.testimonial-card__name {
+	margin: 0 0 0.15rem;
+	font-weight: 600;
+	font-size: 0.95rem;
+	color: #111827;
+}
+
+.testimonial-card__role {
+	margin: 0;
+	font-size: 0.85rem;
+	color: #6b7280;
+}
+
+/* Slider dots */
+.testimonial-slider__dots {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	margin-top: 1rem;
+}
+
+.testimonial-slider__dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 999px;
+	border: 0;
+	background-color: #e5e7eb;
+	cursor: pointer;
+	padding: 0;
+}
+
+.testimonial-slider__dot--active {
+	background-color: #6366f1;
+	width: 18px;
+}
+
+/* Small screens layout: stack image on top */
+@media (max-width: 600px) {
+	.testimonial-card {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.testimonial-card__image {
+		width: 64px;
+		height: 64px;
+	}
+}
