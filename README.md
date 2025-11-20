@@ -198,7 +198,7 @@ The block is designed for pixel-perfect WYSIWYG, using the same component:
    - Automatic frontend hydration
 
 - Autoplay Slider Logic in React
-A simple ```setInterval``` approach was chosen for clarity and minimal runtime overhead.
+  - A simple ```setInterval``` approach was chosen for clarity and minimal runtime overhead.
 
 - Styling with Plain CSS
   - Keeps block isolated
