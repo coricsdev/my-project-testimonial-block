@@ -147,3 +147,8 @@ npm run build
 - ACF Pro 6+ (or ACF Free + ACF Blocks enabled)
 - PHP 8.0+
 - Node.js 16+ (for build tools)
+
+##  AI Usage Note
+
+- AI was used to assist with adding code comments and generating this README.md file.  
+- All functionality, logic, and final implementation were reviewed and validated manually.
