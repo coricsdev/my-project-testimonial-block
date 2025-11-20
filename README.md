@@ -106,7 +106,7 @@ This block uses a shared React component for:
 - The frontend output
 
 Data flow:
-- ACF values → PHP render_callback()
+- ACF values → PHP `render_callback()`
 - PHP outputs a wrapper with a JSON data-* attribute
 - React mounts and renders the slider using the JSON data
 
@@ -185,12 +185,13 @@ The block is designed for pixel-perfect WYSIWYG, using the same component:
 ### Assumptions & Architectural Decisions
 
 - ACF Repeater for Multiple Testimonials
-Chosen to give editors full flexibility while keeping data structured.
+  - Chosen to give editors full flexibility while keeping data structured.
 
 - React for Both Editor + Frontend
-Ensures the same component handles rendering everywhere, preventing layout drift between editor and live site.
+  - Ensures the same component handles rendering everywhere, preventing layout drift between editor and live site.
 
 - Dynamic ACF Block via ```render_callback```
+
 Allows:
   - Clean SSR-safe setup
   - JSON data passed to React
