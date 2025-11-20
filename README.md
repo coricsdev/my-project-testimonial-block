@@ -151,7 +151,64 @@ npm run build
 - PHP 8.0+
 - Node.js 16+ (for build tools)
 
-##  AI Usage Note
+---
+
+## Additional Notes
+
+### How Each Field Affects Rendering?
+
+Each testimonial inside the ACF Repeater includes:
+```bash
+Field	            Usage in Rendering	                                Fallback
+Name	            Displayed as testimonial author	                    “Jane Doe”
+Role	            Shown under the name	                            “Supervisor”
+Testimonial_Text	Rendered as HTML inside the quote	                Default example testimonial
+Image	            Avatar/photo circle	                                default-avatar.png (plugin asset)
+```
+
+All fields pass through the PHP ```render_callback```, which sanitizes the testimonial text using ```wp_kses_post```.
+React then renders the data via props for both editor and frontend views.
+
+### Editor vs Frontend Differences
+
+The block is designed for pixel-perfect WYSIWYG, using the same component:
+- Editor Preview:
+  - React is mounted when ACF triggers ```render_block_preview```.
+  - Autoplay slider works just like the frontend.
+  - CSS styling is fully applied.
+- Frontend:
+  - Same JSON props are passed to the same React ```<TestimonialSlider />``` component.
+  - Identical layout, slider behavior, and styling.
+
+*No alternate markup or placeholder content is used — except fallback testimonial data when ACF fields are empty.*
+
+### Assumptions & Architectural Decisions
+
+- ACF Repeater for Multiple Testimonials
+Chosen to give editors full flexibility while keeping data structured.
+
+- React for Both Editor + Frontend
+Ensures the same component handles rendering everywhere, preventing layout drift between editor and live site.
+
+- Dynamic ACF Block via ```render_callback```
+Allows:
+  - Clean SSR-safe setup
+  - JSON data passed to React
+  - Automatic frontend hydration
+
+- Autoplay Slider Logic in React
+A simple ```setInterval``` approach was chosen for clarity and minimal runtime overhead.
+
+- Styling with Plain CSS
+  - Keeps block isolated
+  - No framework dependencies
+  - Highly portable across themes
+
+--- 
+
+## AI Usage Note
 
 - AI was used to assist with adding code comments and generating this README.md file.  
 - All functionality, logic, and final implementation were reviewed and validated manually.
+
+
