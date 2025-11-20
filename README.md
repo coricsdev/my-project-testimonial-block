@@ -47,9 +47,11 @@ my-project-testimonial-block/
 ```bash
 cd wp-content/plugins/
 git clone https://github.com/coricsdev/my-project-testimonial-block.git
-
-2. Install dependencies
+```
+### 2. Install dependencies
+```bash
 npm install
+```
 
 3. Build assets
 npm run build
