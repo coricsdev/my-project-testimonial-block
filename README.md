@@ -63,7 +63,7 @@ Go to your WordPress admin:
 
 Plugins → Installed Plugins → Activate "My Project – Testimonial Block"
 
-### 5. Ensure ACF Pro (or ACF with block support)
+### 5. Ensure ACF Pro (or ACF with block support) plugin is active
 Go to your WordPress admin and install ACF Pro or any ACF with block support plugin
 
 ---
