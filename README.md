@@ -67,7 +67,7 @@ Plugins → Installed Plugins → Activate "My Project – Testimonial Block"
 
 ## Using the Block
 
-Add Testimonials (Via ACF)
+**Add Testimonials (Via ACF)**
 
 The plugin automatically registers an ACF Field Group for:
 
@@ -78,7 +78,7 @@ The plugin automatically registers an ACF Field Group for:
 
 You can add multiple testimonials using the Repeater.
 
-Insert the Block
+**Insert the Block**
 
 Inside Gutenberg:
 - Click + Add Block
